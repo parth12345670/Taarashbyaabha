@@ -3,103 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taarash By Aabha - Premium Artificial Jewellery</title>
+    <title>तारश by Aabha - Exquisite Artificial Jewelry</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Crimson+Text:wght@400;600&display=swap');
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         body {
-            font-family: 'Georgia', serif;
+            font-family: 'Crimson Text', serif;
             line-height: 1.6;
+            background: linear-gradient(135deg, #fef7e6 0%, #fff5f0 50%, #fef0e6 100%);
             color: #333;
-            background: linear-gradient(135deg, #fdf7f0 0%, #f5e6d3 100%);
         }
-
-        /* Header */
+        
         .header {
             background: linear-gradient(135deg, #8B4513 0%, #CD853F 50%, #DAA520 100%);
             color: white;
             padding: 1rem 0;
-            box-shadow: 0 4px 20px rgba(139, 69, 19, 0.3);
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 4px 15px rgba(139, 0, 0, 0.3);
         }
-
         .top-bar {
             background: rgba(0,0,0,0.2);
             padding: 0.5rem 0;
             text-align: center;
             font-size: 0.9rem;
         }
-
-        .nav {
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            max-width: 1400px;
-            margin: 0 auto;
             padding: 0 2rem;
         }
-
+<style>
+  .product {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  .product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  .product button {
+    background-color: #a6794a;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .product button:hover {
+    background-color: #865c2c;
+  }
+        
         .logo {
-            font-size: 2.8rem;
-            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            background: linear-gradient(45deg, #FFD700, #FFA500);
+            background: linear-gradient(45deg, #ffd700, white);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-
-        .nav-links {
+        
+        .nav-menu {
             display: flex;
             list-style: none;
             gap: 2rem;
         }
-
-        .nav-links a {
+        
+        .nav-menu a {
             color: white;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
+            font-size: 1.1rem;
             transition: all 0.3s ease;
             padding: 0.5rem 1rem;
             border-radius: 25px;
-            position: relative;
         }
-
-        .nav-links a:hover {
-            background: rgba(255, 255, 255, 0.2);
+        
+        .nav-menu a:hover {
+            background: rgba(255, 215, 0, 0.2);
             transform: translateY(-2px);
         }
-
-        .nav-icons {
-            display: flex;
-            gap: 1.5rem;
-            align-items: center;
-        }
-
-        .cart-icon, .search-icon, .wishlist-icon {
+        
+        .cart-icon {
             position: relative;
             font-size: 1.5rem;
             cursor: pointer;
             transition: transform 0.3s ease;
         }
-
-        .cart-icon:hover, .search-icon:hover, .wishlist-icon:hover {
+        
+        .cart-icon:hover {
             transform: scale(1.1);
         }
-
-        .cart-count, .wishlist-count {
+        
+        .cart-count {
             position: absolute;
             top: -8px;
             right: -8px;
-            background: #ff4757;
-            color: white;
+            background: #ffd700;
+            color: #8b0000;
             border-radius: 50%;
             width: 20px;
             height: 20px;
@@ -109,8 +129,7 @@
             font-size: 0.8rem;
             font-weight: bold;
         }
-
-        /* Hero Section */
+        
         .hero {
             background: linear-gradient(rgba(139, 69, 19, 0.6), rgba(218, 165, 32, 0.6)), 
                         url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
@@ -125,565 +144,42 @@
             background-size: cover;
             background-position: center;
         }
-
-        .hero-content h1 {
-            font-size: 4.5rem;
+        
+               .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
             margin-bottom: 1rem;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
             animation: fadeInUp 1s ease;
         }
-
+        
         .hero-content p {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             margin-bottom: 2rem;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
             animation: fadeInUp 1s ease 0.3s both;
         }
 
-        .hero-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
+        
+        .cta-button {
+            background: linear-gradient(45deg, #ffd700, #fff8dc);
+            color: #8b0000;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(255,215,0,0.4);
             animation: fadeInUp 1s ease 0.6s both;
         }
-
-        .cta-button {
-            background: linear-gradient(45deg, #FFD700, #FFA500);
-            color: #8B4513;
-            padding: 1rem 3rem;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3);
-        }
-
-        .cta-button.secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid #FFD700;
-        }
-
+        
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(255, 215, 0, 0.4);
+            box-shadow: 0 6px 20px rgba(255,215,0,0.6);
         }
-
-        /* Features Section */
-        .features {
-            padding: 4rem 2rem;
-            background: white;
-        }
-
-        .features-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .feature-card {
-            text-align: center;
-            padding: 2rem;
-            border-radius: 15px;
-            transition: transform 0.3s ease;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .feature-icon {
-            font-size: 3rem;
-            color: #DAA520;
-            margin-bottom: 1rem;
-        }
-
-        /* Categories Section */
-        .categories {
-            padding: 5rem 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 3.5rem;
-            color: #8B4513;
-            margin-bottom: 1rem;
-            position: relative;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            font-size: 1.2rem;
-            color: #666;
-            margin-bottom: 3rem;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 3px;
-            background: linear-gradient(45deg, #DAA520, #CD853F);
-        }
-
-        .category-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .category-card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 15px 50px rgba(139, 69, 19, 0.1);
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .category-card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 25px 70px rgba(139, 69, 19, 0.2);
-        }
-
-        .category-image {
-            height: 280px;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .category-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, rgba(139, 69, 19, 0.8), rgba(218, 165, 32, 0.8));
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-
-        .category-card:hover .category-overlay {
-            opacity: 1;
-        }
-
-        .category-info {
-            padding: 2rem;
-            text-align: center;
-        }
-
-        .category-info h3 {
-            font-size: 1.8rem;
-            color: #8B4513;
-            margin-bottom: 1rem;
-        }
-
-        .category-info p {
-            color: #666;
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
-
-        .explore-btn {
-            background: linear-gradient(45deg, #8B4513, #CD853F);
-            color: white;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: 500;
-            font-size: 1rem;
-        }
-
-        .explore-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(139, 69, 19, 0.3);
-        }
-
-        /* Featured Products */
-        .featured-products {
-            background: linear-gradient(135deg, #fdf7f0 0%, #f5e6d3 100%);
-            padding: 5rem 2rem;
-        }
-
-        .products-container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .filter-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin: 2rem 0;
-            flex-wrap: wrap;
-        }
-
-        .filter-btn {
-            background: white;
-            color: #8B4513;
-            border: 2px solid #8B4513;
-            padding: 0.8rem 1.5rem;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
-
-        .filter-btn.active, .filter-btn:hover {
-            background: #8B4513;
-            color: white;
-        }
-
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .product-card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .product-card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.15);
-        }
-
-        .product-image {
-            height: 350px;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .product-badges {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .badge {
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: 500;
-            color: white;
-        }
-
-        .celebrity-tag {
-            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
-        }
-
-        .discount-tag {
-            background: linear-gradient(45deg, #2ecc71, #27ae60);
-        }
-
-        .new-tag {
-            background: linear-gradient(45deg, #3498db, #2980b9);
-        }
-
-        .product-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0,0,0,0.8);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-        }
-
-        .product-card:hover .product-overlay {
-            opacity: 1;
-        }
-
-        .quick-view, .add-wishlist {
-            background: white;
-            color: #8B4513;
-            border: none;
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .quick-view:hover, .add-wishlist:hover {
-            background: #FFD700;
-            transform: scale(1.1);
-        }
-
-        .product-info {
-            padding: 2rem;
-        }
-
-        .product-rating {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .stars {
-            color: #FFD700;
-        }
-
-        .rating-text {
-            color: #666;
-            font-size: 0.9rem;
-        }
-
-        .product-name {
-            font-size: 1.3rem;
-            color: #8B4513;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-
-        .product-description {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-
-        .product-price {
-            font-size: 1.8rem;
-            color: #DAA520;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-
-        .original-price {
-            text-decoration: line-through;
-            color: #999;
-            font-size: 1.2rem;
-            margin-left: 0.5rem;
-        }
-
-        .discount-percent {
-            background: #ff4757;
-            color: white;
-            padding: 0.2rem 0.5rem;
-            border-radius: 10px;
-            font-size: 0.8rem;
-            margin-left: 0.5rem;
-        }
-
-        .product-actions {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .add-to-cart, .buy-now {
-            flex: 1;
-            padding: 1rem;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            font-size: 1rem;
-        }
-
-        .add-to-cart {
-            background: linear-gradient(45deg, #8B4513, #CD853F);
-            color: white;
-        }
-
-        .buy-now {
-            background: linear-gradient(45deg, #DAA520, #FFD700);
-            color: #8B4513;
-        }
-
-        .add-to-cart:hover, .buy-now:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Testimonials */
-        .testimonials {
-            padding: 5rem 2rem;
-            background: white;
-        }
-
-        .testimonials-container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .testimonial-card {
-            background: linear-gradient(135deg, #fdf7f0 0%, #f5e6d3 100%);
-            padding: 2rem;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 10px 40px rgba(139, 69, 19, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .testimonial-image {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            margin: 0 auto 1rem;
-            background: linear-gradient(45deg, #8B4513, #CD853F);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 2rem;
-        }
-
-        /* About Section */
-        .about {
-            padding: 5rem 2rem;
-            background: linear-gradient(135deg, #8B4513 0%, #CD853F 100%);
-            color: white;
-        }
-
-        .about-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .about-content h2 {
-            font-size: 3rem;
-            margin-bottom: 2rem;
-            color: #FFD700;
-        }
-
-        .about-content p {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            margin-bottom: 2rem;
-        }
-
-        .about-image {
-            height: 400px;
-            background: url('https://images.unsplash.com/photo-1611652022419-a9419f74343d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80');
-            background-size: cover;
-            background-position: center;
-            border-radius: 20px;
-        }
-
-        /* Footer */
-        .footer {
-            background: #2c1810;
-            color: white;
-            padding: 4rem 2rem 2rem;
-        }
-
-        .footer-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-        }
-
-        .footer-section h3 {
-            margin-bottom: 2rem;
-            color: #FFD700;
-            font-size: 1.5rem;
-        }
-
-        .footer-section p, .footer-section a {
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-            line-height: 2;
-            font-size: 1.1rem;
-        }
-
-        .footer-section a:hover {
-            color: #FFD700;
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .social-icons a {
-            width: 50px;
-            height: 50px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-            font-size: 1.2rem;
-        }
-
-        .social-icons a:hover {
-            background: #FFD700;
-            color: #8B4513;
-            transform: scale(1.1);
-        }
-
-        .footer-bottom {
-            text-align: center;
-            margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            color: rgba(255, 255, 255, 0.6);
-        }
-
-        /* Animations */
+        
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -694,252 +190,604 @@
                 transform: translateY(0);
             }
         }
-
-        @keyframes shimmer {
-            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
-            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
         }
-
-        /* Cart Sidebar */
-        .cart-sidebar {
-            position: fixed;
-            right: -450px;
-            top: 0;
-            width: 450px;
-            height: 100vh;
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #8b0000;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(45deg, #ffd700, #dc143c);
+            margin: 1rem auto;
+            border-radius: 2px;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .product-card {
             background: white;
-            box-shadow: -5px 0 20px rgba(0,0,0,0.1);
-            transition: right 0.3s ease;
-            z-index: 2000;
-            padding: 2rem;
-            overflow-y: auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(139,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
         }
-
-        .cart-sidebar.open {
-            right: 0;
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(139,0,0,0.2);
+            border-color: #ffd700;
         }
-
-        .cart-header {
+        
+        .product-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #f8f8f8, #e8e8e8);
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            margin-bottom: 2rem;
-            padding-bottom: 1rem;
-            border-bottom: 2px solid #f0f0f0;
+            justify-content: center;
+            font-size: 4rem;
+            color: #ccc;
+            position: relative;
+            overflow: hidden;
         }
-
-        .close-cart {
-            background: none;
-            border: none;
+        
+        .product-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, 
+                rgba(255,215,0,0.1) 0%, 
+                rgba(220,20,60,0.1) 50%, 
+                rgba(255,215,0,0.1) 100%);
+        }
+        
+        .product-info {
+            padding: 1.5rem;
+        }
+        
+        .product-name {
+            font-family: 'Playfair Display', serif;
             font-size: 1.5rem;
-            cursor: pointer;
-            color: #8B4513;
+            font-weight: 600;
+            color: #8b0000;
+            margin-bottom: 0.5rem;
         }
-
-        .cart-overlay {
+        
+        .product-price {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #dc143c;
+            margin-bottom: 1rem;
+        }
+        
+        .add-to-cart {
+            width: 100%;
+            padding: 0.8rem;
+            background: linear-gradient(45deg, #8b0000, #dc143c);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .add-to-cart:hover {
+            background: linear-gradient(45deg, #dc143c, #8b0000);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(139,0,0,0.3);
+        }
+        
+        .about {
+            background: linear-gradient(135deg, #fff5f0 0%, #fef7e6 100%);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 3rem 0;
+            text-align: center;
+            border: 3px solid #ffd700;
+        }
+        
+        .about p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #5d4037;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .contact {
+            background: linear-gradient(135deg, #8B4513 0%, #CD853F 50%, #DAA520 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin: 2rem 0;
+            font-size: 1.3rem;
+        }
+        
+        .contact-info i {
+            font-size: 1.5rem;
+            color: #ffd700;
+        }
+        
+        .footer {
+            background: #2c1810;
+            color: #ffd700;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .cart-modal {
+            display: none;
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.5);
-            z-index: 1500;
-            opacity: 0;
-            visibility: hidden;
+            background: rgba(0,0,0,0.8);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .cart-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        
+        .cart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #ffd700;
+        }
+        
+        .close-cart {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #8b0000;
+        }
+        
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .cart-total {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #8b0000;
+            text-align: right;
+            margin: 1rem 0;
+        }
+        
+        .checkout-btn {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(45deg, #8b0000, #dc143c);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
             transition: all 0.3s ease;
         }
-
-        .cart-overlay.active {
-            opacity: 1;
-            visibility: visible;
+        
+        .quantity-controls {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
-
-        /* Responsive Design */
+        
+        .quantity-btn {
+            background: #ffd700;
+            border: none;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #8b0000;
+        }
+        
         @media (max-width: 768px) {
-            .nav {
+            .header-content {
                 flex-direction: column;
                 gap: 1rem;
             }
-
-            .nav-links {
-                gap: 1rem;
+            
+            .nav-menu {
+                flex-wrap: wrap;
+                justify-content: center;
             }
-
+            
             .hero-content h1 {
                 font-size: 2.5rem;
             }
-
-            .hero-content p {
-                font-size: 1.2rem;
+            
+            .product-grid {
+                grid-template-columns: 1fr;
             }
-
-            .section-title {
-                font-size: 2.5rem;
-            }
-
+            
             .logo {
                 font-size: 2rem;
             }
-
-            .about-container {
-                grid-template-columns: 1fr;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .cart-sidebar {
-                width: 100%;
-                right: -100%;
-            }
-        }
-
-        /* Loading Animation */
-        .loading {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            border: 2px solid #fff;
-            border-radius: 50%;
-            border-top-color: transparent;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
         }
     </style>
 </head>
 <body>
-    <!-- Top Bar -->
+<!-- Top Bar -->
     <div class="top-bar">
         <p><i class="fas fa-shipping-fast"></i> Free Shipping on Orders Above ₹2000 | <i class="fas fa-phone"></i> Call: +91 8607972352</p>
     </div>
 
-    <!-- Header -->
     <header class="header">
-        <nav class="nav">
-            <div class="logo">तारश By Aabha</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#categories">Collections</a></li>
-                <li><a href="#featured">Products</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="nav-icons">
-                <div class="search-icon">
-                    <i class="fas fa-search"></i>
-                </div>
-                <div class="wishlist-icon">
-                    <i class="fas fa-heart"></i>
-                    <span class="wishlist-count">0</span>
-                </div>
-                <div class="cart-icon" onclick="toggleCart()">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span class="cart-count">0</span>
-                </div>
+        <div class="header-content">
+            <div class="logo">तारश by Aabha</div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Collection</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon" onclick="openCart()">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count" id="cartCount">0</span>
             </div>
-        </nav>
+        </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Exquisite Artificial Jewellery</h1>
-            <p>Discover Premium Collections Inspired by Bollywood Celebrities</p>
-            <div class="hero-buttons">
-                <a href="#featured" class="cta-button">Shop Collection</a>
-                <a href="#about" class="cta-button secondary">Learn More</a>
+            <h1>तारश by Aabha</h1>
+            <p>Exquisite Traditional Artificial Jewelry</p>
+            <a href="#products" class="cta-button">Explore Collection</a>
+        </div>
+    </section>
+
+    <section id="products" class="section">
+        <h2 class="section-title">Our Precious Collection</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-image">
+ <img src="e.jpeg" alt="Royal Kundan Necklace Set">
+                    <div class="product-overlay"></div>
+                </div>
+                <div class="product-info">
+        
+                    <h3 class="product-name">Royal Kundan Set</h3>
+                    <p class="product-price">₹2,999</p>
+                    <button class="add-to-cart" onclick="addToCart('Royal Kundan Set', 2999)">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image">
+                <img src="hot.jpeg" alt="Royal Kundan Necklace Set">
+
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Bridal Pearl Choker</h3>
+                    <p class="product-price">₹3,499</p>
+                    <button class="add-to-cart" onclick="addToCart('Bridal Pearl Choker', 3499)">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="a.jpeg" alt="Royal Kundan Necklace Set">
+
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Temple Jewelry Earrings</h3>
+                    <p class="product-price">₹1,899</p>
+                    <button class="add-to-cart" onclick="addToCart('Temple Jewelry Earrings', 1899)">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image">
+  <img src="xyz.jpg" alt="Royal Kundan Necklace Set">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Antique Gold Bangles</h3>
+                    <p class="product-price">₹2,299</p>
+                    <button class="add-to-cart" onclick="addToCart('Antique Gold Bangles', 2299)">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image">
+                   <img src="c.jpeg" alt="Royal Kundan Necklace Set">
+                </div>
+
+                
+                <div class="product-info">
+                    <h3 class="product-name">Designer Maang Tikka</h3>
+                    <p class="product-price">₹1,599</p>
+                    <button class="add-to-cart" onclick="addToCart('Designer Maang Tikka', 1599)">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="d.jpeg" alt="Royal Kundan Necklace Set">
+
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Polki Diamond Set</h3>
+                    <p class="product-price">₹4,999</p>
+                    <button class="add-to-cart" onclick="addToCart('Polki Diamond Set', 4999)">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features">
-        <div class="features-container">
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-gem"></i>
-                </div>
-                <h3>Premium Quality</h3>
-                <p>High-quality artificial jewellery that looks and feels authentic</p>
+    <section id="about" class="section">
+        <div class="about">
+            <h2 class="section-title">About तारश by Aabha</h2>
+            <p>Welcome to तारश by Aabha, where tradition meets elegance. We specialize in creating exquisite artificial jewelry that captures the essence of Indian heritage while offering modern sophistication. Each piece in our collection is carefully crafted to bring out the beauty and grace that lies within every woman. From bridal sets to everyday wear, our jewelry is designed to make you feel special on every occasion. We believe that beautiful jewelry should be accessible to everyone, which is why we offer premium quality artificial jewelry at affordable prices.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="contact">
+            <h2 class="section-title" style="color: #ffd700;">Get in Touch</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">We'd love to hear from you! Contact us for custom orders or any queries.</p>
+            <div class="contact-info">
+                <i class="fas fa-phone"></i>
+                <span>+91 8607972352</span>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-shipping-fast"></i>
-                </div>
-                <h3>Fast Delivery</h3>
-                <p>Quick and secure delivery across India within 3-5 business days</p>
+            <div class="contact-info">
+                <i class="fas fa-envelope"></i>
+                <span>info@tarashbyaabha.com</span>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-undo"></i>
-                </div>
-                <h3>Easy Returns</h3>
-                <p>30-day return policy with no questions asked guarantee</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-headset"></i>
-                </div>
-                <h3>24/7 Support</h3>
-                <p>Dedicated customer support team available round the clock</p>
+            <div class="contact-info">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Mandi Dabwali, Haryana, India</span>
             </div>
         </div>
     </section>
 
-    <!-- Categories Section -->
-    <section class="categories" id="categories">
-        <h2 class="section-title">Our Premium Collections</h2>
-        <p class="section-subtitle">Explore our carefully curated jewelry collections inspired by traditional and contemporary designs</p>
-        <div class="category-grid">
-            <div class="category-card">
-                <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80');">
-                    <div class="category-overlay">
-                        <span>Explore Traditional Sets</span>
-                    </div>
-                </div>
-                <div class="category-info">
-                    <h3>Traditional Bridal Sets</h3>
-                    <p>Elegant traditional jewelry sets perfect for weddings, festivals, and special occasions. Featuring intricate Kundan, Polki, and temple jewelry designs.</p>
-                    <button class="explore-btn" onclick="showCategory('traditional')">Explore Collection</button>
-                </div>
-            </div>
-            <div class="category-card">
-                <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80');">
-                    <div class="category-overlay">
-                        <span>Explore Contemporary Designs</span>
-                    </div>
-                </div>
-                <div class="category-info">
-                    <h3>Contemporary Collection</h3>
-                    <p>Modern and chic jewelry designs for the contemporary woman. Perfect for office wear, parties, and everyday elegance.</p>
-                    <button class="explore-btn" onclick="showCategory('contemporary')">Explore Collection</button>
-                </div>
-            </div>
-            <div class="category-card">
-                <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80');">
-                    <div class="category-overlay">
-                        <span>Explore Bridal Luxury</span>
-                    </div>
-                </div>
-                <div class="category-info">
-                    <h3>Luxury Bridal Collection</h3>
-                    <p>Opulent bridal jewellery featuring regal designs that add a royal touch to your wedding day look. Perfect for the bride who wants to stand out.</p>
-                    <button class="explore-btn" onclick="showCategory('luxury')">Explore Collection</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Taarash By Aabha | Designed by Aabha Jhalaria | Contact: <a href="tel:+918607972352">8607972352</a></p>
+    <footer class="footer">
+        <p>&copy; 2025 तारश by Aabha. All rights reserved. | Crafted with❤️ for jewelry lovers</p>
     </footer>
 
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Shopping Cart</h3>
+                <button class="close-cart" onclick="closeCart()">&times;</button>
+            </div>
+            <div id="cartItems"></div>
+            <div class="cart-total" id="cartTotal">Total: ₹0</div>
+            <button class="checkout-btn" onclick="checkout()">
+                <i class="fas fa-credit-card"></i> Proceed to Checkout
+            </button>
+        </div>
+    </div>
+
+    <script>
+        let cart = [];
+        let cartCount = 0;
+        let cartTotal = 0;
+
+        function addToCart(productName, price) {
+            const existingItem = cart.find(item => item.name === productName);
+            
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({
+                    name: productName,
+                    price: price,
+                    quantity: 1
+                });
+            }
+            
+            updateCartDisplay();
+            showAddedToCartMessage(productName);
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCartDisplay();
+        }
+
+        function updateQuantity(index, change) {
+            cart[index].quantity += change;
+            if (cart[index].quantity <= 0) {
+                removeFromCart(index);
+            } else {
+                updateCartDisplay();
+            }
+        }
+
+        function updateCartDisplay() {
+            cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+            cartTotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+            
+            document.getElementById('cartCount').textContent = cartCount;
+            document.getElementById('cartTotal').textContent = `Total: ₹${cartTotal.toLocaleString()}`;
+            
+            const cartItemsContainer = document.getElementById('cartItems');
+            cartItemsContainer.innerHTML = '';
+            
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = '<p style="text-align: center; color: #666; padding: 2rem;">Your cart is empty</p>';
+                return;
+            }
+            
+            cart.forEach((item, index) => {
+                const cartItem = document.createElement('div');
+                cartItem.className = 'cart-item';
+                cartItem.innerHTML = `
+                    <div>
+                        <div style="font-weight: bold; color: #8b0000;">${item.name}</div>
+                        <div style="color: #666;">₹${item.price.toLocaleString()} each</div>
+                    </div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="updateQuantity(${index}, -1)">-</button>
+                        <span style="margin: 0 0.5rem; font-weight: bold;">${item.quantity}</span>
+                        <button class="quantity-btn" onclick="updateQuantity(${index}, 1)">+</button>
+                        <button style="margin-left: 1rem; background: #dc143c; color: white; border: none; padding: 0.2rem 0.5rem; border-radius: 3px; cursor: pointer;" onclick="removeFromCart(${index})">×</button>
+                    </div>
+                `;
+                cartItemsContainer.appendChild(cartItem);
+            });
+        }
+
+        function openCart() {
+            document.getElementById('cartModal').style.display = 'flex';
+        }
+
+        function closeCart() {
+            document.getElementById('cartModal').style.display = 'none';
+        }
+
+        function checkout() {
+            if (cart.length === 0) {
+                alert('Your cart is empty!');
+                return;
+            }
+            
+            const orderSummary = cart.map(item => 
+                `${item.name} (Qty: ${item.quantity}) - ₹${(item.price * item.quantity).toLocaleString()}`
+            ).join('\n');
+            
+            const message = `🛍️ New Order from तारश by Aabha!\n\n📋 Order Details:\n${orderSummary}\n\n💰 Total Amount: ₹${cartTotal.toLocaleString()}\n\n📞 Please contact us at 8607972352 to confirm your order!`;
+            
+            // Create WhatsApp link
+            const whatsappUrl = `https://wa.me/918607972352?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+            
+            // Clear cart after order
+            cart = [];
+            updateCartDisplay();
+            closeCart();
+        }
+
+        function showAddedToCartMessage(productName) {
+            // Create a temporary notification
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 100px;
+                right: 20px;
+                background: linear-gradient(45deg, #8b0000, #dc143c);
+                color: white;
+                padding: 1rem 2rem;
+                border-radius: 10px;
+                box-shadow: 0 4px 15px rgba(139,0,0,0.3);
+                z-index: 3000;
+                animation: slideIn 0.3s ease;
+                font-weight: bold;
+            `;
+            notification.innerHTML = `✅ ${productName} added to cart!`;
+            
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes slideIn {
+                    from { transform: translateX(100%); opacity: 0; }
+                    to { transform: translateX(0); opacity: 1; }
+                }
+            `;
+            document.head.appendChild(style);
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.animation = 'slideIn 0.3s ease reverse';
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                    document.head.removeChild(style);
+                }, 300);
+            }, 2000);
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Close cart when clicking outside
+        document.getElementById('cartModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeCart();
+            }
+        });
+    </script>
 </body>
 </html>
-
